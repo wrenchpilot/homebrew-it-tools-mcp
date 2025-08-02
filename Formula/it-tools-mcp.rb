@@ -9,7 +9,7 @@ class ItToolsMcp < Formula
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
   version "5.0.4"
   url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v#{version}.tar.gz"
-  sha256 "e2d351efdcd69f0f51dc7f93fb4b3b42a653589c2bb042c108643e6aa19bd2d1"
+  sha256 "99332488a5a9aafcb74fa6a8ba93ef95d552ef4b6605503e8263f0ab93e18343"
   license "MIT"
 
   depends_on "node"
