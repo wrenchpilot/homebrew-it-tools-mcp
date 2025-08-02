@@ -7,7 +7,7 @@ class ItToolsMcp < Formula
   end
   desc "Model Context Protocol server with 100+ IT tools for developers/sysadmins"
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
-  version "5.0.3"
+  version "5.0.4"
   url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v#{version}.tar.gz"
   sha256 "e2d351efdcd69f0f51dc7f93fb4b3b42a653589c2bb042c108643e6aa19bd2d1"
   license "MIT"
@@ -16,8 +16,8 @@ class ItToolsMcp < Formula
 
   def install
   system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-  # Symlink all CLI executables from libexec/bin into Homebrew's bin
-  bin.install_symlink Dir["#{libexec}/bin/*"]
+  # Explicitly symlink the CLI to Homebrew's bin
+  bin.install_symlink libexec/"bin/it-tools-mcp" => "it-tools-mcp"
   end
 
   test do
