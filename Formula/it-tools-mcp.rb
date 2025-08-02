@@ -16,9 +16,8 @@ class ItToolsMcp < Formula
 
   def install
   system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    # Symlink the CLI from build/index.js if present, otherwise from bin/
-    cli = Dir[libexec/"build/index.js"].first || Dir[libexec/"bin/it-tools-mcp"].first
-    bin.install_symlink cli => "it-tools-mcp" if cli
+  # Symlink all CLI executables from libexec/bin into Homebrew's bin
+  bin.install_symlink Dir["#{libexec}/bin/*"]
   end
 
   test do
