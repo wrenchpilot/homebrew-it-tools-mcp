@@ -7,7 +7,7 @@ This is a Homebrew tap for the IT Tools MCP server.
 First, add this tap:
 
 ```
-brew tap wrenchpilot/it-tools
+brew tap wrenchpilot/it-tools-mcp
 ```
 
 Then install the IT Tools MCP server:
