@@ -3,8 +3,8 @@ require "language/node"
 class ItToolsMcp < Formula
   desc "Model Context Protocol server with 121+ IT tools for developers and sysadmins"
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
-  url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v5.2.2.tar.gz"
-  sha256 "161cf5a6317f070a5e6c46b3193eed13195c548d7b8ae163b78bb8b284e50a0c"
+  url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v5.2.3.tar.gz"
+  sha256 "b29e3ad7121a2bb0816b7e9fede80a51cca831370cde433ea83167105ad9d1f3"
   license "MIT"
 
   depends_on "node"
