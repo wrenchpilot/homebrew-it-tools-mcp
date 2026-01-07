@@ -1,7 +1,7 @@
 require "language/node"
 
 class ItToolsMcp < Formula
-  desc "Model Context Protocol server with 121+ IT tools for developers and sysadmins"
+  desc "Model Context Protocol server with 100+ IT tools for developers and sysadmins"
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
   url "https://registry.npmjs.org/it-tools-mcp/-/it-tools-mcp-5.8.6.tgz"
   sha256 "92265d43e67f97a68b197f5fc8b7e35c4addf46b4952059b57db45e8735465d7"
