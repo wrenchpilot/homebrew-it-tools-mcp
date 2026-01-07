@@ -3,25 +3,21 @@ require "language/node"
 class ItToolsMcp < Formula
   desc "Model Context Protocol server with 121+ IT tools for developers and sysadmins"
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
-  url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v5.8.6.tar.gz"
-  sha256 "3034f254190c4526b7c67ff6877294bdf4cfacf7b90d09401f7dd72f9c9a4cd2"
+  url "https://registry.npmjs.org/it-tools-mcp/-/it-tools-mcp-5.8.6.tgz"
+  sha256 "92265d43e67f97a68b197f5fc8b7e35c4addf46b4952059b57db45e8735465d7"
   license "MIT"
 
   depends_on "node"
 
   def install
-    # Install dependencies and build using standard Node helpers
     system "npm", "install", *std_npm_args
-    system "npm", "run", "build" if (libexec/"package.json").exist?
-
-    # Symlink the package executables
-    bin.install_symlink Dir[libexec/"bin/*"]
+    bin.install_symlink libexec.glob("bin/*")
   end
 
   test do
-    # Basic sanity checks: package.json exists and the installed bin is presen
-    assert_predicate libexec/"package.json", :exist?
-    assert_match version.to_s, (libexec/"package.json").read
-    assert_predicate bin/"it-tools-mcp", :exist?
+    assert_path_exists bin/"it-tools-mcp"
+    pkg_json = libexec/"lib/node_modules/it-tools-mcp/package.json"
+    assert_path_exists pkg_json
+    assert_match version.to_s, pkg_json.read
   end
 end
