@@ -4,7 +4,7 @@ class ItToolsMcp < Formula
   desc "Model Context Protocol server with 121+ IT tools for developers and sysadmins"
   homepage "https://github.com/wrenchpilot/it-tools-mcp"
   url "https://github.com/wrenchpilot/it-tools-mcp/archive/refs/tags/v5.8.6.tar.gz"
-  sha256 "3697cd80c02ca1a8114bf75c77c96354a2316286f32dd6f60a889ae177629468"
+  sha256 "3034f254190c4526b7c67ff6877294bdf4cfacf7b90d09401f7dd72f9c9a4cd2"
   license "MIT"
 
   depends_on "node"
